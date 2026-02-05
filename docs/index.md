@@ -31,3 +31,8 @@ for<br>
 To review the details listed of the material used to construct the subsection, you can review it in the ["BOM"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/) section of the datasheet.
 
 >Continue for all the remaining/missing sections.
+
+### Directory
+
+* To view the requirements that built the foundation of the subsystem, visit the ["Requirements" page](https://samerwin1.github.io/Merwin_EGR314_S26/01-Requirements/Requirements/).
+* To understand the physical components of the subsystem and how they are connected, visit the ["Block Diagram" page](https://samerwin1.github.io/Merwin_EGR314_S26/02-Block-Diagram/Block-Diagram/).
