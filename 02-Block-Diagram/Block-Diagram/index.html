@@ -26,7 +26,7 @@
 
     
       
-        <title>Module's Block Diagram - EGR 314 - Seth Merwin Datasheet</title>
+        <title>Subsystem Block Diagram - EGR 314 - Seth Merwin Datasheet</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Module's Block Diagram
+              Subsystem Block Diagram
             
           </span>
         </div>
@@ -517,7 +517,7 @@
           
   
   <span class="md-ellipsis">
-    Module's Block Diagram
+    Subsystem Block Diagram
   </span>
   
 
@@ -528,7 +528,7 @@
         
   
   <span class="md-ellipsis">
-    Module's Block Diagram
+    Subsystem Block Diagram
   </span>
   
 
@@ -557,9 +557,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-block-diagram" class="md-nav__link">
+  <a href="#block-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Block Diagram
+      Block Diagram
     </span>
   </a>
   
@@ -809,9 +809,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-block-diagram" class="md-nav__link">
+  <a href="#block-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Block Diagram
+      Block Diagram
     </span>
   </a>
   
@@ -840,21 +840,15 @@
   
 
 
-  <h1>Module's Block Diagram</h1>
+  <h1>Subsystem Block Diagram</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This needs to be updated with a brief purpose for having the block diagram.
-Things to mention are:
-* power levels
-* sensor
-* Actuator
-* team connections
-* Power source
-* ...</p>
-<p>To get some initial formatting help, one can view <a href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/">"here"</a> some basic techniques.</p>
-<h2 id="example-block-diagram">Example Block Diagram</h2>
-<p>Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../individual-block-diagram.png" data-desc-position="bottom"><img alt="Example of Indivial Block diagram " src="../individual-block-diagram.png"></a></p>
+<p>This page provides a block diagram representing the hardware components in the Distance-Sensing subsystem, how they connect to each other, and how they are powered. The microcontroller and all components are powered by a regulated 3.3V switching DC. Jumpers have been put in place to allow switching the source power between one individual to the subsystem(for prototyping purposes) and one shared by the team(for the final design). All logic and control inside the subsystem will be handled by the Microchip PIC18F47K42 surface-mount microcontroller. This subsystem wil make use of a single-point LiDAR ToF sensor to capture and process distance data, interacting with the microcontroller through I2C serial communication. The subsystem will use ICSP programming through the Microchip Snap debugger/programmer in order to update the software throughout the prototyping phase. Interaction with other subsystems will be through UART serial communication via one upstream ribbon connector and one downstream ribbon connector. One generic LED and generic pushbutton have also been added for subsystem status/debugging purposes.</p>
+<h2 id="block-diagram">Block Diagram</h2>
+<p></p><center>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../314IndividualBlockDiagram.drawio.png" data-desc-position="bottom"><img alt="Block Diagram" src="../314IndividualBlockDiagram.drawio.png"></a>
+</center><p></p>
+<p>A PDF version of the block diagram is available <a href="../314IndividualBlockDiagram.pdf">here</a>, and the original drawio file <a href="../314IndividualBlockDiagram.drawio">here</a>.</p>
 
 
 
@@ -893,7 +887,7 @@ Things to mention are:
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../../01-Requirements/Requirements/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Distance-Sensing Module's Requirements">
+          <a href="../../01-Requirements/Requirements/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Subsystem Requirements">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
@@ -903,7 +897,7 @@ Things to mention are:
                 Previous
               </span>
               <div class="md-ellipsis">
-                Distance-Sensing Module's Requirements
+                Subsystem Requirements
               </div>
             </div>
           </a>
