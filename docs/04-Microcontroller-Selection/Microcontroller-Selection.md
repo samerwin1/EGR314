@@ -45,12 +45,12 @@ My role on the team is to create a module which can measure the distance from th
 
 The image below shows the setup of the Master Code Configurator inside MPLABXIDE, verifying that the chosen microcontroller can be used to power all necessary peripherals for the module.
 
-[MCC Setup](MCCSetupTest.png)
+![MCC Setup](MCCSetupTest.png)
 
 The setup includes 2 pins for communicating with other modules through UART, 2 pins for controlling the LiDAR sensor through I2C, 1 GO pin for controlling the status-LED, and 1 GI pin for receiving a pushbutton signal(debugging). There are more than enough pins for all the functionality needed, and the MCC files have succesfully generated with no errors. This test generation is evidence that the microcontroller will be sufficient for this module's purposes.
 
 ## Final Microcontroller Choice: **PIC18F47K42**
 
-[PIC18F47K42](PIC18F47K42(SurfaceMount).png)
+![PIC18F47K42](PIC18F47K42(SurfaceMount).png)
 
 After researching, collecting resources, reviewing the datasheet, reviewing pin/module-allocation, and creating a test project in MPLABXIDE, it is safe to say that the PIC18F47K42 will provide more than enough functionality for the purposes of the distance-sensing module. Not only do I have experience using the through-hole package of this microcontroller, I have also found a plethora of resources to feel comfortable using it for the project. It is low-cost, can be programmed using the SNAP tool which has already been provided, and has more than enough pins and modules. Finally, testing the setup in the MPLAB software has proven that it can be programmed for the use-case that is required.
