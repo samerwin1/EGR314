@@ -1,65 +1,47 @@
 ---
-title: Module's Selected Major Components
+title: Component Selection
 ---
 
 ## Module's Selected Major Components
 
-The following sections are the selected major components necessary for  .....
-
->**For each of the following sections, use <ins>one of the two styles</ins> given near the end. *REMOVE THIS NOTE***
+The following sections are the selected major components necessary for providing power to the distance-sensing module and meeting the module's product requirements.
 
 ### Power Management
 
-(**remove this note/placeholder**: this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable} **THAT WERE SELECTED**)
+**LM2596-3.3 Switching Regulator:** This regulator will be used to convert the external unregulated DC power source into a switching 3.3V DC power supply. This will allow the microcontroller to be powered while improving efficiency.
 
-For more details, review the ["Appendix - Component Selection Process - Power Mangement"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#power-management) selection.
+![](LM2596S-3.3(Regulator).png)
 
 ### Sensor
 
-(**remove this note/placeholder**: if applicable, this is where your  **SELECTED** sensor is shown. Otherwise, remove this section.)
+**TFLuna I2C LiDAR Module:** This ToF single-point LiDAR sensor will provide the product with the capability to measure the distance to objects in its path.
 
-For more details, review the ["Appendix - Component Selection Process - Sensor"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#sensor) selection.
-
-### Actuator
-
-(**remove this note/placeholder**: if applicable, this is where your **Selected** the actuator items go, which includes both the driver and motor. Otherwise, remove this section.)
-
-For more details, review the ["Appendix - Component Selection Process - Actuator"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#actuator) selection.
+![](TFLunaI2C(LiDAR).png)
 
 -----------
-> Remove the following before submitting! Use them to present the selected components
 
-### Style 1
+## Comparison Tables
 
-> This is the example found in the assignment, uses more html
+### **Voltage Regulator**
 
-*Table 1: Example component selection*
-
-**External Clock Module**
-
-| **Component**                                                                                                                                                                                      | **Pros**                                                                                                                                    | **Cons**                                                                                            |
+| **Component** | **Pros** | **Cons** |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| ![](image1.png)<br> XC1259TR-ND surface mount crystal<br>$1/each<br>[link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)                 | \* Inexpensive[^1]<br>\* Compatible with PSoC<br>\* Meets surface mount constraint of project                                               | \* Requires external components and support circuitry for interface<br>\* Needs special PCB layout. |
+| ![](TL2575(Regulator).png)<br> TL2575-33IKTTR Switching Regulator<br>$2.58/each<br>[link to product](https://www.digikey.com/en/products/detail/texas-instruments/TL2575-33IKTTR/1629209) | \* Inexpensive<br>\* Provides required 3.3V switching output<br>\* Meets surface mount constraint of project | \* Requires external inductor, diode, capacitors<br>\* 1A output may be limiting |
+| ![](LM2596S-3.3(Regulator).png)<br> LM2596-3.3 Switching Regulator<br>$1.17/each<br>[link to product](https://www.digikey.com/en/products/detail/evvo/LM2596S-3-3-EV/24370077) | \* Least expensive<br>\* Provides requred 3.3V switching output<br>\* 3A output provides extra headroom<br>\* Meets surface mount constraint of project | \* Requires external inductor, diode, capacitors<br>\* Lower efficiency |
+| ![](R-78B3.3-1.5(Regulator).png)<br> R-78B3.3-1.5 Switching Regulator<br>$12.94/each<br>[link to product](https://www.digikey.com/en/products/detail/recom-power/r-78b3-3-1-5/2256231) | \* Requires no external components<br>\* Provides required 3.3V switching output<br>\* 1.5A output allows sufficient current draw | \* Very expensive<br>\* Through-hole package does not meet surface mount constraint |
 
-**Rationale:** A clock oscillator is easier ....
+**Selection:** LM2596-3.3 Switching Regulator
 
-### Style 2
+**Rationale:** The selected regulator meets the project and module requirements, allows the highest current draw, and is the least expensive of the three.
 
-> Also acceptable, more markdown friendly
+### **Sensor**
 
-**External Clock Module**
+| **Component** | **Pros** | **Cons** |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| ![](TFMini-S(LiDAR).png)<br> TFMini-S Micro LiDAR Module<br>$72.95/each<br>[link to product](https://www.sparkfun.com/tfmini-s-micro-lidar-module.html?utm) | \* Great range<br>\* Low avg current/range ratio<br>\* Meets serial sensor constraint of project | \* Very expensive<br>\* High power consumption |
+| ![](VL53L1X(LiDAR).png)<br> Pololu VL53L1X Distance Sensor<br>$22.95/each<br>[link to product](https://www.pololu.com/product/4071) | \* Least expensive<br>\* Low current/power draw<br>\* High resolution<br>\* Very lightweight | \* Short range<br>\* PWM output does not meet the serial sensor constraint of the project |
+| ![](TFLunaI2C(LiDAR).png)<br> TFLuna I2C LiDAR Module<br>$24.99/each<br>[link to product](https://www.mouser.com/ProductDetail/Benewake/TF-Luna-I2C?qs=DPoM0jnrROUWvdDwJYVpzw%3D%3D&mgh=1&utm) | \* Suitable range<br>\* Within budget<br>\* Meets serial sensor constraint of project | \* Relatively expensive<br>\* Range could be lower than optimal in unideal conditions |
 
-1. XC1259TR-ND surface mount crystal
+**Selection:** TFLuna I2C LiDAR Module
 
-    ![](image1.png)
-
-    * $1/each
-    * [link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)
-
-    | Pros                                      | Cons                                                             |
-    | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Inexpensive                               | Requires external components and support circuitry for interface |
-    | Compatible with PSoC                      | Needs special PCB layout.                                        |
-    | Meets surface mount constraint of project |
-
-**Rationale:** A clock oscillator is easier ...
+**Rationale:** While it may not be able to consistently read at the target range defined in product requirements, it should read above the threshold range. It is the best middle ground to meet the module requirements while still fitting in the project budget.
